@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Ultimate Game Gallery</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: url('https://images.unsplash.com/photo-1508780709619-79562169bc64?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        /* Top Navigation */
+        
+        .top-nav {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 20px 40px;
+            background: rgba(0, 0, 0, 0.7);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+        
+        .top-nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: bold;
+            position: relative;
+            transition: color 0.3s;
+        }
+        /* Animated underline */
+        
+        .top-nav a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 0%;
+            height: 3px;
+            background-color: #fcff40;
+            /* underline color */
+            transition: width 0.4s ease;
+        }
+        
+        .top-nav a:hover::after {
+            width: 100%;
+        }
+        
+        .top-nav a:hover {
+            color: #fcff40;
+            /* hover text color */
+        }
+        /* Hero Section */
+        
+        .hero {
+            text-align: center;
+            padding: 120px 20px 60px;
+            background: rgba(0, 0, 0, 0.6);
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            animation: fadeInDown 1s ease forwards;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+            animation: fadeIn 1.5s ease forwards;
+        }
+        
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        /* Team Section */
+        
+        .team-section {
+            padding: 60px 40px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        
+        .team-section h2 {
+            font-size: 2rem;
+            margin-bottom: 40px;
+        }
+        
+        .team-members {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+        
+        .member-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.4s, box-shadow 0.4s;
+            cursor: pointer;
+        }
+        
+        .member-card:hover {
+            transform: translateY(-10px) rotateX(3deg);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+        }
+        
+        .member-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .member-card h3 {
+            margin: 15px 0;
+        }
+        
+        .member-card p {
+            padding: 0 15px 20px;
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+        /* Back Button */
+        
+        .back-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 25px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #000;
+            background-color: #40e2ff;
+            /* button color */
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        /* Button hover effect */
+        
+        .back-btn:hover {
+            background-color: #333fe7;
+            transform: scale(1.05);
+        }
+        /* Button click effect */
+        
+        .back-btn:active {
+            background-color: #2840c6;
+            transform: scale(0.95);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            font-size: 14px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="top-nav">
+        <a href="home.html">Home</a>
+        <a href="About .html">about</a>
+        <a href="Contact.html">Contact</a>
+        <a href="index.html">Login</a>
+    </div>
+
+    <section class="hero">
+        <h1>About our website </h1>
+        <p>Ultimate Game is your premier destination for discovering exciting and immersive online games. We curate a collection of adventure, action, racing, and strategy games for gamers of all ages. Our mission is to deliver fun, challenge, and unforgettable
+            gaming experiences in one interactive platform.Get now Home page or click Get games and enjoy Games. If you have any problems, please contact WhatsApp number: 01611762942.</p>
+        <a class="back-btn" href="home.html">Back to Home</a>
+    </section>
+
+    <section class="team-section" id="about">
+        <h2>Meet the Team</h2>
+        <div class="team-members">
+            <div class="member-card">
+                <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=400&q=80" alt="Team Member">
+                <h3>Amer Panno</h3>
+                <p>Founder & Game Curator. Passionate about delivering the ultimate gaming experience.</p>
+            </div>
+            <div class="member-card">
+                <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=400&q=80" alt="Team Member">
+                <h3>Jane Doe</h3>
+                <p>Lead Developer. Creates smooth gameplay mechanics and immersive environments.</p>
+            </div>
+            <div class="member-card">
+                <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=400&q=80" alt="Team Member">
+                <h3>John Smith</h3>
+                <p>UI/UX Designer. Ensures the platform is intuitive and visually stunning.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2025 Ultimate Game Gallery. All Rights Reserved.
+    </footer>
+
+</body>
+
+</html>
